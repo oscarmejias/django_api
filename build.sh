@@ -5,5 +5,7 @@ set -o errexit
 # poetry install
 pip install -r requirements.txt
 
+createsuperuser --noinput
+
 python manage.py collectstatic --no-input
 python manage.py migrate
